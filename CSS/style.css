@@ -8,25 +8,47 @@
 
 nav .navbar-brand {
   font-family: var(--Montserrat-Font);
+  font-weight: 800;
 }
 
 nav .nav-item {
   font-family: var(--Poppins-Font);
-}
-
-nav .active {
   position: relative;
+  font-size: 14px;
+  padding: 6px 12px;
 }
 
-nav .active::after {
+.navbar-nav > li {
+  padding: unset;
+  margin: unset;
+}
+.navbar-nav > li > a {
+  padding: unset;
+  margin: unset;
+}
+
+.navbar-nav > li > a:after {
   content: "";
-  width: 80%;
+  width: 0;
   height: 2px;
   background: black;
   position: absolute;
-  bottom: 0;
-  left: 7px;
-  cursor: pointer;
+  bottom: 10px;
+  left: 15px;
+  right: 0;
+  transition: all 0.5s;
+}
+
+.navbar-nav > li .active:after {
+  width: 60%;
+}
+
+.navbar-nav > li.services .active:after {
+  width: 67%;
+}
+
+.navbar-nav > li.contact .active:after {
+  width: 66%;
 }
 
 .navbar-toggler {
@@ -39,14 +61,10 @@ nav .active::after {
 
 .nav-link {
   color: black;
+  transition: 0.3s;
 }
 
 .nav-link:hover {
-  color: black;
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
   color: black;
 }
 
@@ -71,8 +89,8 @@ nav .active::after {
   .navbar-nav .nav-link.show {
     color: black;
   }
-  nav .active::after {
-    width: 0;
+  .navbar-nav > li .active:after {
+    width: 0%;
   }
 }
 
@@ -591,7 +609,7 @@ header .items .item i {
   transition: 0.3s;
 }
 
-#team .container .img-content:hover .card-img   {
+#team .container .img-content:hover .card-img {
   transition: 0.3s;
   transform: scale(1.2);
 }
