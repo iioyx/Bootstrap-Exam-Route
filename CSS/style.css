@@ -163,6 +163,12 @@ header .items .item i {
   color: white;
 }
 
+.progress {
+  border-radius: 5px;
+  background: #f7f7f7;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+
 .progress span {
   color: white;
   font-family: var(--Montserrat-Font);
