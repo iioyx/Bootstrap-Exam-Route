@@ -398,9 +398,12 @@ header .items .item i {
   overflow: hidden;
 }
 
+#portfolio .item .icons a {
+  text-decoration: none;
+}
+
 #portfolio .item:hover .img-overlay {
   opacity: 1;
-  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
@@ -417,6 +420,7 @@ header .items .item i {
   transform: translateY(-15px);
   transition: all 0.5s;
 }
+
 #portfolio .item .icons i {
   display: inline-block;
   width: 30px;
@@ -579,16 +583,15 @@ header .items .item i {
   position: relative;
 }
 
-.card-img,
-.card-img-top {
+.card-img {
   border-radius: unset;
 }
 
-#team .container .card .card-img-top {
+#team .container .card .card-img {
   transition: 0.3s;
 }
 
-#team .container .card .card-img-top:hover {
+#team .container .img-content:hover .card-img   {
   transition: 0.3s;
   transform: scale(1.2);
 }
