@@ -50,7 +50,7 @@ nav .active::after {
   color: black;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .navbar-collapse {
     text-align: center;
     border: none;
