@@ -89,8 +89,9 @@ nav .nav-item {
   .navbar-nav .nav-link.show {
     color: black;
   }
-  .navbar-nav > li .active:after,.navbar-nav > li.contact .active:after
-  ,.navbar-nav > li.services .active:after {
+  .navbar-nav > li .active:after,
+  .navbar-nav > li.contact .active:after,
+  .navbar-nav > li.services .active:after {
     width: 0%;
   }
 }
@@ -354,7 +355,6 @@ header .items .item i {
 }
 
 .nav-tabs .nav-link {
-  color: black;
   border-color: transparent;
   border-radius: 20px;
   position: relative;
@@ -362,11 +362,12 @@ header .items .item i {
   font-weight: 700;
   font-size: 16px;
   transition: 0.3s;
+  color: #333;
 }
 
-.nav-tabs .nav-link.active::after {
+.nav-tabs .nav-link::after {
   content: "";
-  width: 50%;
+  width: 0%;
   height: 2px;
   background: var(--Main-Color);
   position: absolute;
@@ -374,6 +375,10 @@ header .items .item i {
   left: 13px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.nav-tabs .nav-link.active::after {
+  width: 55%;
 }
 
 .nav-tabs .nav-link.active#brand-tab::after {
@@ -391,10 +396,6 @@ header .items .item i {
   left: 16px;
 }
 
-.nav-tabs .nav-link {
-  color: #333;
-  transition: 0.3s;
-}
 .nav-tabs .nav-link:hover {
   border-color: transparent;
   transition: 0.3s;
